@@ -1,4 +1,3 @@
-// console.log("javascript running");
 const toDivResources = document.querySelector("#resources");
 const toShowResources = document.querySelector("#show-resources");
 
@@ -18,6 +17,12 @@ function onStopHoverResource(e) {
     e.target.classList.remove("fw-bold");
 }
 
-// toDivResources.addEventListener(, onHandlerFunction);
+toDivResources.addEventListener("click", onClickResource);
+function onClickResource(e) {
+    e.target.classList.add("fst-italic"); 
+}
 
-
+toDivResources.addEventListener("mouseout", onLeaveResource);
+function onLeaveResource(e) {
+    e.target.classList.remove("fst-italic"); 
+}
